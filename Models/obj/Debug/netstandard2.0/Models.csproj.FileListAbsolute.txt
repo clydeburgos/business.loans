@@ -1,0 +1,8 @@
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\bin\Debug\netstandard2.0\Models.deps.json
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\bin\Debug\netstandard2.0\Models.dll
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\bin\Debug\netstandard2.0\Models.pdb
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\obj\Debug\netstandard2.0\Models.AssemblyInfoInputs.cache
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\obj\Debug\netstandard2.0\Models.AssemblyInfo.cs
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\obj\Debug\netstandard2.0\Models.dll
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\obj\Debug\netstandard2.0\Models.pdb
+D:\Projects\Projects\Personal Projects\business\LoanApp\Models\obj\Debug\netstandard2.0\Models.csprojAssemblyReference.cache

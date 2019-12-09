@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">
+      Customers
+    </div>
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <div class="search d-flex w-50">
+          <input type="search" class="form-control" [formControl]="searchKey" placeholder="Search..." /> &nbsp;
+          <button class="btn btn-secondary" type="button">Search</button>
+        </div>
+        <div class="commands">
+          <a href="javascript:void(0)" [routerLink]='["/customers/create"]' class="btn btn-primary" type="button">Add Customer</a>
+        </div>
+      </div>
+      <div class="pt-2">
+          <ag-grid-angular *ngIf="!busy"
+          style="width: 100%; height: 300px;" 
+          class="ag-theme-balham"
+          [rowData]="customers"
+          [pagination]="true"
+          (gridReady)="onGridReady($event)"
+          [pagination]="true"
+          [paginationPageSize]="10"
+          [columnDefs]="customerColums">
+      </ag-grid-angular>
+        <!-- <table class="table table-sm table-striped">
+          <thead>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Address</th>
+              <th>Contact Numbers</th>
+              <th>Member Status</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let cust of customers">
+                <td>{{ cust.firstName }}</td>
+                <td>{{ cust.lastName }}</td>
+                <td>{{ cust.streetAddress }}, {{ cust.city }}, {{ cust.postalCode }}</td>
+                <td>{{ cust.telephoneNumber }} / {{ cust.mobileNumber }}</td>
+                <td>{{ cust.isMember ? 'MEMBER' : 'NOT A MEMBER' }}</td>
+            </tr>
+          </tbody>
+        </table> -->
+      </div>
+    </div>
+</div>

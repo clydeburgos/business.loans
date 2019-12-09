@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+
+  .actions-button-cell { 
+    overflow:visible; 
+  }
+  
+  .ag-row {
+    z-index: 0;
+  }
+  
+  /* .ag-cell { 
+    overflow:visible; 
+  } */
+  
+  .ag-row.ag-row-focus {
+    z-index: 1;
+  }
+  
+  .ag-root.ag-layout-auto-height,
+  .ag-body-viewport.ag-layout-auto-height,
+  .ag-body-viewport-wrapper.ag-layout-auto-height {
+    overflow: visible;
+  }
+
+  h1.badge, h2.badge, h3.badge, h4.badge, h5.badge {
+    font-size: inherit!important;
+  }

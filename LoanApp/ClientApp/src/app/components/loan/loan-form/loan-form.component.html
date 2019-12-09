@@ -1,0 +1,66 @@
+<div class="card">
+  <div class="card-header">
+    Loan Info
+  </div>
+  <div class="card-body">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="d-flex border-bottom justify-content-between">
+            <h3 class="font-weight-bold text-primary">{{ loanNumber }}</h3>
+            <h3 class="font-weight-bold">{{ 'Vincent Clyde Burgos' | uppercase }} </h3>
+          </div>
+          <div class="d-flex justify-content-between pt-3">
+           <h4 class="badge badge-primary">P {{ (model.Amount).toFixed(2) }}</h4>
+           <h4 class="badge badge-success">P {{ (model.Amount + (model.Amount * (model.Interest / 100))).toFixed(2) }} &nbsp;<i class="fas fa-arrow-up"></i></h4>
+          </div>
+          <div class="d-flex justify-content-end">
+            <span class="badge badge-info">
+              <a href="javascript:void(0)" class="text-white" (click)="toggleBreakdown()">Show breakdown <i class="fas fa-stream"></i></a>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="amount" class="control-label">Amount</label>
+                <input type="number" [(ngModel)]="model.Amount" id="amount" ngDefaultControl placeholder="Amount" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="interest" class="control-label">Interest</label>
+                <input type="number" [(ngModel)]="model.Interest" [disabled]="true" id="interest" placeholder="Interest" class="form-control" autofocus>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="transactionDate" class="control-label">Date of Transaction</label>
+                <input type="text" id="transactionDate" [(ngModel)]="model.TransactionDate" placeholder="Date of Transaction" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="dueDate" class="control-label">Expected Due Date</label>
+                <input type="text" id="dueDate" [(ngModel)]="model.EstimatedDueDate" class="form-control" autofocus>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-12">
+              <div class="form-group">
+                  <label for="customer" class="control-label">Search Customer</label> &nbsp;
+                  <input type="search" id="customer" placeholder="Customer" class="form-control" autofocus>
+              </div>
+          </div>
+      </div>
+    </div> 
+  </div>
+  <div class="card-footer">
+      <button class="btn btn-secondary" [routerLink]='["/transactions"]' type="button">Back to List</button> &nbsp;
+      <button class="btn btn-primary" (click)="save()" type="button">Save</button>
+  </div>
+</div>

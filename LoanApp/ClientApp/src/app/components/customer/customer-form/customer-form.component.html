@@ -1,0 +1,79 @@
+<div class="card">
+  <div class="card-header">
+    Customer Info
+  </div>
+  <div class="card-body">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="firstName" class="control-label">First Name</label>
+                <input type="text" id="firstName" [(ngModel)]="model.FirstName" ngDefaultControl placeholder="First Name" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="lastName" class="control-label">Last Name</label>
+                <input type="text" id="lastName" [(ngModel)]="model.LastName" ngDefaultControl placeholder="Last Name" class="form-control" autofocus>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="streetAddress" class="control-label">Street Address</label>
+                <input type="text" id="streetAddress" [(ngModel)]="model.StreetAddress" ngDefaultControl placeholder="Street Address" class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="city" class="control-label">City</label>
+                <input type="text" id="city" [(ngModel)]="model.City" placeholder="City" ngDefaultControl class="form-control" autofocus>
+            </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="postalCode" class="control-label">Postal Code</label>
+                <input type="text" id="postalCode" [(ngModel)]="model.PostalCode" placeholder="Postal Code" ngDefaultControl class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="telNumber" class="control-label">Tel #</label>
+                <input type="text" id="telNumber" [(ngModel)]="model.TelephoneNumber" placeholder="Tel #" ngDefaultControl class="form-control" autofocus>
+            </div>
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="MobNumber" class="control-label">Mobile #</label>
+                <input type="text" id="MobNumber" [(ngModel)]="model.MobileNumber" placeholder="Mobile #" ngDefaultControl class="form-control" autofocus>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" [(ngModel)]="model.IsMember" checked id="member" ngDefaultControl (click)="toggleMembership($event)" >
+                <label class="form-check-label"  for="member">Is Member</label>
+              </div>
+        </div>
+      </div>
+      <div class="row" *ngIf="!isMember">
+          <div class="col-md-12">
+              <div class="form-group">
+                  <label for="coMaker" class="control-label">Search Co-maker</label> &nbsp;
+                  <input type="text" id="coMaker" [(ngModel)]="model.CoMaker" ngDefaultControl placeholder="Customer" class="form-control" autofocus>
+              </div>
+          </div>
+      </div>
+    </div> 
+  </div>
+  <div class="card-footer">
+      <button class="btn btn-secondary" [routerLink]='["/customer"]' type="button">Back to List</button> &nbsp;
+      <button class="btn btn-primary" (click)="save()" type="button">Save</button>
+  </div>
+</div>
